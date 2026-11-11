@@ -1,0 +1,125 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>CafeDekor | Cafe & Restaurant Interior Design, Istanbul</title>
+<meta name="description" content="CafeDekor is an Istanbul-based studio designing and building cafe and restaurant interiors.">
+<meta property="og:title" content="CafeDekor | Cafe & Restaurant Interior Design"><meta property="og:description" content="Design, project and execution for hospitality interiors."><meta property="og:image" content="assets/hero-poster.jpg">
+<link rel="icon" href="assets/bean.png"><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500&family=Hanken+Grotesk:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root{--ivory:#F7F5F0;--cream:#EEEAE2;--champ:#D8C9B5;--taupe:#A99B8A;--esp:#30251F;--char:#242321;--w:#fff;--serif:"Cormorant Garamond",Georgia,serif;--sans:"Hanken Grotesk",system-ui,sans-serif;--pad:clamp(20px,5vw,72px)}
+*{box-sizing:border-box;margin:0}html{scroll-behavior:smooth}body{background:var(--ivory);color:var(--esp);font:400 16px/1.7 var(--sans);overflow-x:hidden}
+img,video{display:block;max-width:100%}a{color:inherit;text-decoration:none}button{font:inherit;cursor:pointer}
+:focus-visible{outline:2px solid var(--esp);outline-offset:3px}
+h1,h2,h3{font:400 clamp(40px,6.4vw,104px)/1 var(--serif);letter-spacing:-.01em}h2{font-size:clamp(34px,4.6vw,72px)}h3{font-size:clamp(24px,2.4vw,34px)}
+p{max-width:52ch}.sec{padding:clamp(72px,11vw,160px) var(--pad)}
+/* nav */
+nav{position:fixed;inset:0 0 auto;z-index:50;display:flex;align-items:center;justify-content:space-between;padding:18px var(--pad);transition:background .5s,color .5s;color:var(--w)}
+nav.solid{background:rgba(247,245,240,.96);color:var(--esp);padding-block:12px;box-shadow:0 1px 0 rgba(48,37,31,.1)}
+.logo{display:flex;align-items:center;gap:10px;font:500 20px var(--sans);letter-spacing:.22em}.logo img{width:30px;height:30px;object-fit:contain}
+.links{display:flex;gap:30px;align-items:center;font-size:14px;letter-spacing:.04em}.links a{position:relative;padding:6px 0}.links a:after{content:"";position:absolute;left:0;bottom:0;height:1px;width:100%;background:currentColor;transform:scaleX(0);transform-origin:left;transition:transform .4s}.links a:hover:after,.links a.on:after{transform:scaleX(1)}
+.lang{display:flex;gap:6px}.lang button{background:none;border:0;color:inherit;opacity:.55;font-size:13px}.lang button.on{opacity:1}
+.btn{display:inline-block;border:1px solid currentColor;padding:14px 28px;font-size:14px;letter-spacing:.05em;background:none;color:inherit;transition:background .4s,color .4s,border-color .4s}
+.btn.fill{background:var(--w);color:var(--esp);border-color:var(--w)}.btn:hover{background:var(--esp);color:var(--ivory);border-color:var(--esp)}.btn.fill:hover{background:var(--champ);color:var(--esp);border-color:var(--champ)}
+.burger{display:none;background:none;border:0;color:inherit;width:44px;height:44px;position:relative}.burger i{position:absolute;left:10px;right:10px;height:1px;background:currentColor;transition:.4s}.burger i:nth-child(1){top:16px}.burger i:nth-child(2){top:27px}
+.open .burger i:nth-child(1){top:21px;transform:rotate(45deg)}.open .burger i:nth-child(2){top:21px;transform:rotate(-45deg)}
+@media(max-width:900px){.burger{display:block}.links{position:fixed;inset:0;background:var(--ivory);color:var(--esp);flex-direction:column;justify-content:center;gap:22px;font:400 38px var(--serif);transform:translate3d(0,-100%,0);transition:transform .7s cubic-bezier(.7,0,.2,1);z-index:-1}.open .links{transform:translate3d(0,0,0)}.open{color:var(--esp)}.links .btn{font:14px var(--sans)}}
+/* hero */
+.hero{position:relative;height:100svh;min-height:600px;color:var(--w);display:flex;align-items:flex-end;padding:0 var(--pad) clamp(56px,9vh,110px);overflow:hidden;background:var(--esp)}
+.hero video,.hero .poster{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:50% 55%}
+.hero:before{content:"";position:absolute;inset:0;z-index:1;background:linear-gradient(180deg,rgba(32,22,16,.45),rgba(32,22,16,.12) 40%,rgba(32,22,16,.68))}
+.hero>div{position:relative;z-index:2}.hero h1{max-width:12ch}.hero p{margin:24px 0 34px;font-size:clamp(16px,1.4vw,19px);max-width:46ch}.hero .cta{display:flex;gap:14px;flex-wrap:wrap}
+.hero .btn:not(.fill){border-color:rgba(255,255,255,.7)}.hero .btn:not(.fill):hover{background:var(--w);color:var(--esp)}
+.scroll{position:absolute;right:var(--pad);bottom:44px;z-index:2;width:1px;height:70px;background:rgba(255,255,255,.3);overflow:hidden}.scroll:after{content:"";display:block;width:1px;height:30px;background:#fff;animation:sc 2.2s infinite}@keyframes sc{from{transform:translateY(-30px)}to{transform:translateY(70px)}}
+.line{display:block;overflow:hidden}.line>span{display:block;transform:translateY(105%);animation:up 1.2s cubic-bezier(.2,.7,.1,1) forwards}.line:nth-child(2)>span{animation-delay:.15s}.hero .fade{opacity:0;animation:fi 1.2s .6s forwards}@keyframes up{to{transform:none}}@keyframes fi{to{opacity:1}}
+/* reveal */
+.rv{opacity:0;transform:translateY(26px);transition:opacity .8s,transform .8s}.rv.in{opacity:1;transform:none}
+.mask{overflow:hidden;position:relative;background:var(--cream)}.mask img,.mask video{width:100%;height:100%;object-fit:cover;transform:scale(1.12);transition:transform 1.8s cubic-bezier(.2,.7,.1,1)}.mask:after{content:"";position:absolute;inset:0;z-index:1;background:var(--cream);transform:scaleY(1);transform-origin:top;transition:transform 1.3s cubic-bezier(.7,0,.2,1);pointer-events:none}.mask.in:after{transform:scaleY(0)}.mask.in img,.mask.in video{transform:none}
+a.card:hover .mask.in img{transform:scale(1.05)}
+/* layouts */
+.intro{display:grid;grid-template-columns:1fr 1fr;gap:clamp(32px,7vw,120px);align-items:end}.intro .mask{aspect-ratio:4/5}.intro p{margin-top:32px}
+.grid{display:grid;grid-template-columns:repeat(12,1fr);gap:clamp(24px,3vw,48px);margin-top:56px}
+.card{display:block}.card .mask{aspect-ratio:4/5}.card h3{margin-top:16px}.card small{color:var(--warm,#817B73);font-size:13px;letter-spacing:.04em}
+.c1{grid-column:1/8}.c2{grid-column:9/13;margin-top:120px}.c3{grid-column:2/6}.c4{grid-column:7/13;margin-top:-60px}.c1 .mask{aspect-ratio:5/4}.c4 .mask{aspect-ratio:1}
+.filters{display:flex;gap:22px;flex-wrap:wrap;margin-top:32px}.filters button{background:none;border:0;border-bottom:1px solid transparent;color:var(--esp);padding:4px 0;opacity:.6}.filters button.on{opacity:1;border-color:var(--esp)}
+.pg{columns:3 280px;column-gap:32px;margin-top:48px}.pg .card{break-inside:avoid;margin-bottom:40px}.pg .card .mask{aspect-ratio:auto}.pg .card:nth-child(odd) .mask{aspect-ratio:3/4}.pg .card:nth-child(even) .mask{aspect-ratio:1}
+.svc{margin-top:56px;border-top:1px solid var(--champ)}.svc div{display:grid;grid-template-columns:1fr 1.2fr;gap:24px;padding:30px 0;border-bottom:1px solid var(--champ)}.svc div h3,.svc div p{transition:transform .5s}.svc div:hover h3,.svc div:hover p{transform:translateX(20px)}.svc p{color:#6b625a}
+.db{background:var(--cream);display:grid;grid-template-columns:1.1fr 1fr;gap:clamp(32px,6vw,100px);align-items:center}.db .mask{aspect-ratio:9/12;max-height:80vh}.db p{margin-top:28px}
+.band{position:relative;height:70vh;min-height:420px;color:var(--w);display:grid;place-items:center;text-align:center;padding:var(--pad)}.band img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}.band:before{content:"";position:absolute;inset:0;background:rgba(40,28,20,.55);z-index:1}.band>div{position:relative;z-index:2}.band .btn{margin-top:32px}
+.pd{padding:140px var(--pad) 0}.pd .hero-img{aspect-ratio:16/9;margin-top:40px}.pd .meta{display:grid;grid-template-columns:1fr 1.5fr;gap:40px;margin:56px 0}.gal{display:grid;grid-template-columns:1fr 1fr;gap:24px}.gal .mask{aspect-ratio:3/4}.gal video{aspect-ratio:9/16;max-height:80vh}
+.pn{display:flex;justify-content:space-between;padding:64px 0;border-top:1px solid var(--champ);margin-top:64px;font:400 28px var(--serif)}
+form{display:grid;grid-template-columns:1fr 1fr;gap:28px;margin-top:48px}form .full{grid-column:1/-1}label{display:block;font-size:13px;letter-spacing:.04em}input,select,textarea{width:100%;margin-top:6px;background:none;border:0;border-bottom:1px solid var(--taupe);padding:10px 0;font:inherit;color:inherit;border-radius:0}textarea{min-height:110px;resize:vertical}input:focus,select:focus,textarea:focus{outline:0;border-color:var(--esp)}
+.err{color:#9b2f22;font-size:13px;min-height:18px;display:block}.msg{grid-column:1/-1;padding:16px 20px;font-size:15px}.msg.ok{background:var(--cream)}.msg.bad{background:#f3dcd7;color:#6b1f15}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:clamp(32px,7vw,110px)}
+footer{background:var(--cream);padding:72px var(--pad) 32px;display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:40px}footer p{font-size:14px;color:#6b625a;margin-top:14px}footer a{display:block;padding:4px 0}footer .cp{grid-column:1/-1;border-top:1px solid var(--champ);padding-top:24px;font-size:13px;color:#6b625a}
+.nf{min-height:80vh;display:grid;place-content:center;gap:24px;padding:140px var(--pad)}
+@media(max-width:800px){.intro,.db,.two,.pd .meta,.svc div,footer{grid-template-columns:1fr}.grid{display:block}.grid .card{margin:0 0 48px}.gal{grid-template-columns:1fr}form{grid-template-columns:1fr}.band{height:60vh}}
+@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}.line>span,.hero .fade,.rv{opacity:1;transform:none}.mask:after{display:none}.mask img,.mask video{transform:none}.scroll{display:none}}
+</style></head><body>
+<nav id="nav"><a class="logo" href="#/" aria-label="CafeDekor home"><img src="assets/bean.png" alt="">CAFEDEKOR</a>
+<div class="links" id="links"><a href="#/" data-r="/" data-i="home">Home</a><a href="#/projects" data-r="/projects" data-i="projects">Projects</a><a href="#/services" data-r="/services" data-i="services">Services</a><a href="#/about" data-r="/about" data-i="about">About</a><a href="#/contact" data-r="/contact" data-i="contact">Contact</a>
+<span class="lang"><button data-l="en" class="on">EN</button><button data-l="tr">TR</button></span><a class="btn" href="#/contact" data-i="start">Start a Project</a></div>
+<button class="burger" id="burger" aria-label="Menu" aria-expanded="false"><i></i><i></i></button></nav>
+<main id="app"></main>
+<footer><div><a class="logo" href="#/"><img src="assets/bean.png" alt="">CAFEDEKOR</a><p data-i="fstate">Design, project and execution for cafe and restaurant interiors. Istanbul, working worldwide.</p></div>
+<div><a href="#/projects" data-i="projects">Projects</a><a href="#/services" data-i="services">Services</a><a href="#/about" data-i="about">About</a><a href="#/contact" data-i="contact">Contact</a></div>
+<div><a href="https://www.instagram.com/cafedekor/" target="_blank" rel="noopener">Instagram</a><!-- CONFIG: add verified email/phone as mailto:/tel: links --></div>
+<div class="cp">© <span id="yr"></span> CafeDekor</div></footer>
+<script>
+const FORM_ENDPOINT=""; // CONFIG: e.g. a Formspree URL "https://formspree.io/f/xxxx"
+const $=(s,r=document)=>r.querySelector(s),$$=(s,r=document)=>[...r.querySelectorAll(s)];
+const revealIO="IntersectionObserver" in window?new IntersectionObserver(entries=>entries.forEach(entry=>{
+const target=entry.target,video=target.matches("video")?target:$("video[data-lazyvid]",target);
+if(entry.isIntersecting){if(!target.matches("video"))target.classList.add("in");if(video)playVideo(video);else revealIO.unobserve(target)}
+else if(video)video.pause()
+}),{threshold:.12,rootMargin:"0px 0px 60px 0px"}):null;
+function playVideo(video){const playback=video.play();if(playback)playback.catch(error=>{if(error.name!=="NotAllowedError"&&error.name!=="AbortError")console.warn("Video playback failed",error)})}
+function observeReveals(root){const targets=$$(".rv,.mask",root);if(revealIO)targets.forEach(target=>revealIO.observe(target));else targets.forEach(target=>target.classList.add("in"))}
+const T={en:{home:"Home",projects:"Projects",services:"Services",about:"About",contact:"Contact",start:"Start a Project",fstate:"Design, project and execution for cafe and restaurant interiors. Istanbul, working worldwide."},
+tr:{home:"Ana Sayfa",projects:"Projeler",services:"Hizmetler",about:"Hakkımızda",contact:"İletişim",start:"Proje Başlat",fstate:"Kafe ve restoran iç mekanları için tasarım, proje ve uygulama. İstanbul merkezli, dünya genelinde."}};
+let lang=localStorage.getItem("l")||"en";
+const P=[{id:1,img:"p1",cat:"Cafe",t:"Featured Interior Project",d:"Glass block, polished timber and a concealed-lit coffee bar."},{id:2,img:"p2",cat:"Cafe",t:"Hospitality Interior",d:"A brushed steel counter under warm ceiling light."},{id:3,img:"p3",cat:"Restaurant",t:"Restaurant Design",d:"Reclaimed timber, brass pendants and patterned floor tile."},{id:4,img:"p4",cat:"Cafe",t:"Cafe Interior",d:"A glass block window wall above a steel and glass pastry counter."}];
+const S=[["Interior Design","Cafe and restaurant interiors shaped around atmosphere and use."],["Concept Development","A clear design idea, set before detailed work begins."],["Space Planning","Layouts for service, circulation and seating."],["Architectural Detailing","Joinery, surfaces and junctions drawn precisely."],["Project Design & Coordination","Drawings and decisions kept consistent through delivery."],["Design & Build Execution","The same studio carries the design through to the finished space."]];
+const mk=(src,alt,c="")=>`<div class="mask ${c}"><img src="assets/${src}.jpg" alt="${alt}" loading="lazy" decoding="async"></div>`;
+const card=(p,c="")=>`<a class="card rv ${c}" href="#/project/${p.id}">${mk(p.img,p.d)}<h3>${p.t}</h3><small>${p.cat}</small></a>`;
+const R={
+"/":()=>`<section class="hero"><img class="poster" src="assets/hero-poster.jpg" alt="Cafe interior film still" fetchpriority="high" decoding="async"><video id="hv" muted loop playsinline preload="none" poster="assets/hero-poster.jpg" aria-hidden="true"></video>
+<div><h1><span class="line"><span>Spaces That Inspire.</span></span><span class="line"><span>Experiences That Last.</span></span></h1><p class="fade">Crafting distinctive cafe and restaurant spaces through thoughtful design, refined detailing and seamless execution.</p><div class="cta fade"><a class="btn fill" href="#/projects">Explore Our Projects</a><a class="btn" href="#/contact">Start Your Project</a></div></div><span class="scroll"></span></section>
+<section class="sec intro"><div><h2 class="rv">Designing Spaces.<br>Building Experiences.</h2><p class="rv">From the first concept to the final detail, CafeDekor brings design vision and execution together to create distinctive hospitality environments.</p></div>${mk("p3","Brushed steel cafe counter","")}</section>
+<section class="sec" style="padding-top:0"><h2 class="rv">Selected projects</h2><div class="grid">${card(P[0],"c1")}${card(P[1],"c2")}${card(P[2],"c3")}${card(P[3],"c4")}</div></section>
+<section class="sec db"><div><h2 class="rv">From Vision to Reality.</h2><p class="rv">Bringing creative vision and practical execution together to shape memorable hospitality spaces.</p><a class="btn rv" style="margin-top:32px" href="#/services">Our services</a></div><div class="mask"><video src="assets/film1.mp4" poster="assets/film1.jpg" muted loop playsinline preload="none" data-lazyvid aria-label="Project film"></video></div></section>
+<section class="sec"><h2 class="rv">Services</h2><div class="svc">${S.map(s=>`<div class="rv"><h3>${s[0]}</h3><p>${s[1]}</p></div>`).join("")}</div><!-- Proposed categories: verify with CafeDekor --></section>
+<section class="band"><img src="assets/p1.jpg" alt="Polished timber cafe interior" loading="lazy" decoding="async"><div><h2>Have a Space in Mind?</h2><p style="margin:16px auto 0">Let's discuss your next hospitality project.</p><a class="btn fill" href="#/contact">Start Your Project</a></div></section>`,
+"/projects":()=>`<section class="sec" style="padding-top:150px"><h1 style="font-size:clamp(44px,7vw,110px)">Projects</h1><div class="filters">${["All","Cafe","Restaurant"].map((f,i)=>`<button class="${i?"":"on"}" data-f="${f}">${f}</button>`).join("")}</div><div class="pg" id="pg"></div></section>`,
+"/services":()=>`<section class="sec" style="padding-top:150px"><h1 style="font-size:clamp(44px,7vw,110px)">Services</h1><div class="svc">${S.map(s=>`<div class="rv"><h3>${s[0]}</h3><p>${s[1]}</p></div>`).join("")}</div><a class="btn" style="margin-top:56px" href="#/contact">Start Your Project</a></section>`,
+"/about":()=>`<section class="sec two" style="padding-top:150px"><div><h1 style="font-size:clamp(44px,6vw,96px)">Where Design Meets Detail.</h1><p style="margin-top:32px">CafeDekor is a cafe and restaurant interior design and build studio based in Istanbul. Its work moves from design to project to execution, and takes in projects worldwide.</p><p style="margin-top:16px">Studio history, team and credits will be added here once supplied by CafeDekor.</p></div>${mk("p4","Timber restaurant interior with brass pendants")}</section>`,
+"/contact":()=>`<section class="sec two" style="padding-top:150px"><div><h1 style="font-size:clamp(44px,6vw,96px)">Have a Space in Mind?</h1><p style="margin-top:28px">Let's discuss your next hospitality project.</p><p style="margin-top:24px"><a href="https://www.instagram.com/cafedekor/" target="_blank" rel="noopener" style="border-bottom:1px solid">Instagram @cafedekor</a></p></div>
+<form id="f" novalidate><label>Name<input name="name" required autocomplete="name"><span class="err"></span></label><label>Email<input name="email" type="email" required autocomplete="email"><span class="err"></span></label><label>Phone<input name="phone" type="tel" autocomplete="tel"><span class="err"></span></label>
+<label>Project type<select name="type" required><option value="">Select</option><option>Cafe</option><option>Restaurant</option><option>Other hospitality</option></select><span class="err"></span></label><label class="full">Location<input name="location" required><span class="err"></span></label><label class="full">Message<textarea name="message" required></textarea><span class="err"></span></label>
+<div class="full"><button class="btn" id="sb">Send enquiry</button></div><div id="fm" class="msg" hidden role="status"></div></form></section>`};
+function project(id){const i=P.findIndex(p=>p.id==id);if(i<0)return null;const p=P[i],n=P[(i+1)%4],v=P[(i+3)%4];
+return`<section class="pd"><small>${p.cat}</small><h1 style="font-size:clamp(40px,6vw,96px)">${p.t}</h1>${mk(p.img,p.d,"hero-img")}<div class="meta"><h3>Overview</h3><p>${p.d} Further project details will be added once supplied.</p></div>
+<div class="gal">${mk(P[(i+1)%4].img,P[(i+1)%4].d)}<div class="mask"><video src="assets/film${i%2+1}.mp4" poster="assets/film${i%2+1}.jpg" muted loop playsinline preload="none" data-lazyvid controls aria-label="Project film"></video></div></div>
+<div class="pn"><a href="#/project/${v.id}">← Previous</a><a href="#/project/${n.id}">Next →</a></div></section>`}
+function view(){const h=location.hash.slice(1)||"/";let html;const m=h.match(/^\/project\/(\d)$/);
+html=m?project(m[1]):R[h]?R[h]():null;
+if(!html){html=`<section class="nf"><h1>404</h1><p>This page could not be found.</p><a class="btn" href="#/">Back to home</a></section>`;document.title="Page not found | CafeDekor"}else document.title=({"/":"CafeDekor | Cafe & Restaurant Interior Design, Istanbul","/projects":"Projects | CafeDekor","/services":"Services | CafeDekor","/about":"About | CafeDekor","/contact":"Contact | CafeDekor"})[h]||"Project | CafeDekor";
+const app=$("#app");app.querySelectorAll("video").forEach(video=>video.pause());if(revealIO)revealIO.disconnect();app.innerHTML=html;scrollTo(0,0);nav();$("#nav").classList.remove("open");$$("#links a[data-r]").forEach(a=>a.classList.toggle("on",a.dataset.r==h));
+if(h=="/projects")grid("All");
+observeReveals(app);hero();
+const f=$("#f");if(f)f.onsubmit=submit;$$(".filters button").forEach(b=>b.onclick=()=>{$$(".filters button").forEach(x=>x.classList.toggle("on",x==b));grid(b.dataset.f)})}
+function grid(f){const g=$("#pg");if(revealIO)$$(".rv,.mask",g).forEach(target=>revealIO.unobserve(target));g.innerHTML=P.filter(p=>f=="All"||p.cat==f).map(p=>card(p)).join("");observeReveals(g)}
+function hero(){const v=$("#hv");if(!v)return;const ok=innerWidth>700&&!matchMedia("(prefers-reduced-motion:reduce)").matches&&!(navigator.connection&&navigator.connection.saveData);if(!ok)return;v.src="assets/hero.mp4";if(revealIO)revealIO.observe(v);else playVideo(v)}
+const navEl=$("#nav");let navPending=false;
+function nav(){if(navPending)return;navPending=true;requestAnimationFrame(()=>{navPending=false;const solid=scrollY>40||location.hash.length>2;if(navEl.classList.contains("solid")!==solid)navEl.classList.toggle("solid",solid)})}
+addEventListener("scroll",nav,{passive:true});addEventListener("hashchange",view);
+$("#burger").onclick=()=>{const o=$("#nav").classList.toggle("open");$("#burger").setAttribute("aria-expanded",o)};
+function setLang(l){lang=l;localStorage.setItem("l",l);document.documentElement.lang=l;$$("[data-i]").forEach(e=>e.textContent=T[l][e.dataset.i]);$$(".lang button").forEach(b=>b.classList.toggle("on",b.dataset.l==l))}
+$$(".lang button").forEach(b=>b.onclick=()=>setLang(b.dataset.l));
+async function submit(e){e.preventDefault();const f=e.target,fm=$("#fm"),sb=$("#sb");let bad=0;
+$$("label",f).forEach(l=>{const i=$("input,select,textarea",l),er=$(".err",l);let m="";if(i.required&&!i.value.trim())m="This field is required.";else if(i.type=="email"&&!/^\S+@\S+\.\S+$/.test(i.value))m="Enter a valid email address.";er.textContent=m;if(m)bad++});
+if(bad)return;fm.hidden=false;
+if(!FORM_ENDPOINT){fm.className="msg bad";fm.textContent="This form is not connected to an email service yet, so your enquiry was not sent. Please contact CafeDekor on Instagram.";return}
+sb.disabled=true;sb.textContent="Sending…";
+try{const r=await fetch(FORM_ENDPOINT,{method:"POST",headers:{Accept:"application/json"},body:new FormData(f)});if(!r.ok)throw 0;fm.className="msg ok";fm.textContent="Thank you. Your enquiry has been sent.";f.reset()}catch{fm.className="msg bad";fm.textContent="Your enquiry could not be sent. Please try again or contact CafeDekor on Instagram."}
+sb.disabled=false;sb.textContent="Send enquiry"}
+$("#yr").textContent=new Date().getFullYear();setLang(lang);view();
+</script></body></html>
